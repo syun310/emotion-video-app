@@ -3,10 +3,11 @@ import streamlit as st
 
 
 video_map = {
-    "기쁨": "https://www.dropbox.com/scl/fi/bmhzy7me5ox62r30m20kc/happy.mp4?rlkey=wy6bgmw7d5ffo28o1nevpjcz9&raw=1",
-    "슬픔": "https://www.dropbox.com/scl/fi/dwvv413t800bszt5yeeod/angry.mp4?rlkey=1733hxz0ilbkl3qqsmk5gnc8l&raw=1",
-    "분노": "https://www.dropbox.com/scl/fi/dwvv413t800bszt5yeeod/angry.mp4?rlkey=1733hxz0ilbkl3qqsmk5gnc8l&raw=1"
+    "기쁨": "https://www.dropbox.com/scl/fi/bmhzy7me5ox62r30m20kc/happy.mp4?dl=1",
+    "슬픔": "https://www.dropbox.com/scl/fi/dwvv413t800bszt5yeeod/angry.mp4?dl=1",
+    "분노": "https://www.dropbox.com/scl/fi/dwvv413t800bszt5yeeod/angry.mp4?dl=1"
 }
+
 
 
 st.set_page_config(page_title="사라지는 예술", layout="centered")
