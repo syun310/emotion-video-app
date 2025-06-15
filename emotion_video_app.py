@@ -31,7 +31,7 @@ if user_input:
 
     st.success(f"감지된 감정: {emotion}")
 
-    if emotion in emotion_to_video:
+   if emotion in video_map:
         video_path = emotion_to_video[emotion]
         st.video(video_path)
     else:
