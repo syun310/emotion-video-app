@@ -10,7 +10,7 @@ video_map = {
 
 # 페이지 설정
 st.set_page_config(page_title="사라지는 예술", layout="centered")
-st.title("🎬 감정 기반 영상 소멸 시스템")
+st.title("🎬 Ai, 사라지는 예술")
 st.markdown("지금 느끼는 감정을 아래에 입력해주세요. 해당 감정에 맞는 영상이 재생됩니다.")
 
 # 감정 입력
