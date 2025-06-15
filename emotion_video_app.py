@@ -2,12 +2,7 @@
 import streamlit as st
 
 # 감정과 대응되는 영상 링크 매핑
-video_map = {
-    "기쁨": "https://player.vimeo.com/video/1093442739",
-    "슬픔": "https://player.vimeo.com/video/1093442747",
-    "분노": "https://player.vimeo.com/video/1093442761"
-}
-
+https://youtube.com/shorts/C1EbNnZ4UgI?feature=share
 st.set_page_config(page_title="감정 기반 영상 소멸 시스템", layout="centered")
 st.title("🎬 감정 기반 영상 소멸 시스템")
 st.markdown("지금 느끼는 감정을 아래에 입력해주세요. 해당 감정에 맞는 영상이 재생됩니다.")
