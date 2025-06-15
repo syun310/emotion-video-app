@@ -3,11 +3,11 @@ import streamlit as st
 
 # 감정과 대응되는 영상 파일 매핑 (파일은 같은 폴더에 있어야 함)
 emotion_to_video = {
-    "기쁨": "joy_video.mp4",
-    "슬픔": "sadness_video.mp4",
-    "분노": "anger_video.mp4",
-    "불안": "anxiety_video.mp4"
+    "기쁨": "https://drive.google.com/uc?export=download&id=1ABCdefGhIjKlmNOPqr123456789",
+    "슬픔": "https://drive.google.com/uc?export=download&id=1lI9SNtoIKSHHhJGuzFKsx2a8_-Ui0VHc",
+    "분노": "https://drive.google.com/uc?export=download&id=1XUS7lv513By8a4-nSwe4hHJyYZWeHmVK"
 }
+
 
 st.set_page_config(page_title="감정 기반 영상 소멸 시스템", layout="centered")
 st.title("🎬 감정 기반 영상 소멸 시스템")
