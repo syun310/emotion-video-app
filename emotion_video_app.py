@@ -1,4 +1,3 @@
-
 import streamlit as st
 import streamlit.components.v1 as components
 
@@ -16,7 +15,7 @@ st.markdown("지금 느끼는 감정을 아래에 입력해주세요. 해당 감
 # 감정 입력
 user_input = st.text_input("✍ 지금 어떤 감정이 드시나요?", placeholder="예: 기쁨, 슬픔, 분노...")
 
-# 감정 분석
+# 감정 분석 및 출력
 if user_input:
     emotion = "기타"
     if "기쁨" in user_input or "행복" in user_input:
@@ -32,13 +31,7 @@ if user_input:
     if emotion in video_map:
         video_id = video_map[emotion]
         youtube_url = f"https://www.youtube.com/embed/{video_id}?autoplay=1&mute=1&rel=0&modestbranding=1"
+        
         components.html(
             f"""
-            <iframe width="100%" height="400" src="{youtube_url}" 
-                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-            </iframe>
-            """,
-            height=400
-        )
-    else:
-        st.warning("⚠️ 해당 감정에 맞는 영상이 없어요. 다른 감정을 입력해주세요.")
+            <iframe width="100%" height="400" src="{y
