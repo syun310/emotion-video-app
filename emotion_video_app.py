@@ -5,7 +5,7 @@ import streamlit as st
 video_map = {
     "기쁨": "https://player.vimeo.com/video/1093442739",
     "슬픔": "https://player.vimeo.com/video/1093442747",
-    "분노": "https://player.vimeo.com/video/109344276"
+    "분노": "https://player.vimeo.com/video/1093442761"
 }
 
 st.set_page_config(page_title="감정 기반 영상 소멸 시스템", layout="centered")
