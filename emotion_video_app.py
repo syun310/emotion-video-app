@@ -8,14 +8,15 @@ video_map = {
     "분노": "RhVVSvBjKJk"
 }
 
+# 페이지 설정
 st.set_page_config(page_title="감정 기반 영상 소멸 시스템", layout="centered")
-st.title("🎞 감정 기반 영상 소멸 시스템")
+st.title("🎬 감정 기반 영상 소멸 시스템")
 st.markdown("지금 느끼는 감정을 아래에 입력해주세요. 해당 감정에 맞는 영상이 재생됩니다.")
 
 # 감정 입력
-user_input = st.text_input("✍ 지금 어떤 감정이 드시나요?", placeholder="예: 기쁨, 슬픔, 분노...")
+user_input = st.text_input("✍️ 지금 어떤 감정이 드시나요?", placeholder="예: 기쁨, 슬픔, 분노...")
 
-# 감정 분석 및 출력
+# 감정 분석
 if user_input:
     emotion = "기타"
     if "기쁨" in user_input or "행복" in user_input:
@@ -27,11 +28,16 @@ if user_input:
 
     st.success(f"감지된 감정: {emotion}")
 
-    # iframe으로 유튜브 영상 삽입
+    # iframe으로 유튜브 영상 임베드
     if emotion in video_map:
         video_id = video_map[emotion]
-        youtube_url = f"https://www.youtube.com/embed/{video_id}?autoplay=1&mute=1&rel=0&modestbranding=1"
-        
         components.html(
             f"""
-            <iframe width="100%" height="400" src="{y
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/{video_id}?autoplay=1&mute=1&rel=0&modestbranding=1"
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            """,
+            height=400
+        )
+    else:
+        st.warning("⚠️ 해당 감정에 맞는 영상이 없어요. 다른 감정을 입력해주세요.")
+
