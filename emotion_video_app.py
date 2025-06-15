@@ -32,7 +32,6 @@ if user_input:
     st.success(f"감지된 감정: {emotion}")
 
    if emotion in video_map:
-        video_path = emotion_to_video[emotion]
-        st.video(video_path)
+        st.video(video_map[emotion])
     else:
         st.warning("해당 감정에 맞는 영상이 아직 준비되지 않았습니다.")
