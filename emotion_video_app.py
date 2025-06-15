@@ -29,9 +29,9 @@ if user_input:
     elif "불안" in user_input or "초조" in user_input:
         emotion = "불안"
 
-    st.success(f"감지된 감정: {emotion}")
+      st.success(f"감지된 감정: {emotion}")
 
-   if emotion in video_map:
+    if emotion in video_map:
         st.video(video_map[emotion])
     else:
-        st.warning("해당 감정에 맞는 영상이 아직 준비되지 않았습니다.")
+        st.warning("😥 해당 감정에 맞는 영상이 없어요. 다른 감정을 입력해주세요.")
