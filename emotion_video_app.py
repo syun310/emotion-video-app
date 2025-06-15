@@ -2,9 +2,9 @@
 import streamlit as st
 
 video_map = {
-    "기쁨": "https://www.youtube.com/watch?v=1aY-TS-4mk4",
-    "슬픔": "https://www.youtube.com/watch?v=C1EbNnZ4UgI",
-    "분노": "https://www.youtube.com/watch?v=RhVVSvBjKJk"
+    "기쁨": "1aY-TS-4mk4",
+    "슬픔": "C1EbNnZ4UgI",
+    "분노": "RhVVSvBjKJk"
 }
 
 st.set_page_config(page_title="감정 기반 영상 소멸 시스템", layout="centered")
@@ -26,6 +26,17 @@ if user_input:
     st.success(f"감지된 감정: {emotion}")
 
     if emotion in video_map:
-        st.video(video_map[emotion])
+        video_id = video_map[emotion]
+        st.components.v1.html(
+            f"""
+            <iframe width="100%" height="400" 
+                src="https://www.youtube.com/embed/{video_id}?rel=0&modestbranding=1&autoplay=1&mute=1" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+            """, 
+            height=400
+        )
     else:
         st.warning("⚠️ 해당 감정에 맞는 영상이 없어요. 다른 감정을 입력해주세요.")
